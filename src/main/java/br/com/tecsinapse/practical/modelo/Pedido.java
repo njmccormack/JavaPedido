@@ -6,6 +6,14 @@ import com.google.common.collect.Lists;
 
 public class Pedido {
 
+	public Pedido(String cnpjCliente, String usuarioSolicitante,
+			List<ItemPedido> itens) {
+		super();
+		this.cnpjCliente = cnpjCliente;
+		this.usuarioSolicitante = usuarioSolicitante;
+		this.itens = itens;
+	}
+
 	private String cnpjCliente;
 	private String usuarioSolicitante;
 	private List<ItemPedido> itens = Lists.newArrayList();

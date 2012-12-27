@@ -7,10 +7,10 @@ import br.com.tecsinapse.practical.modelo.Pedido;
 
 import com.google.common.collect.Lists;
 
-public class Teste {
+public class Main {
 
 	public static List<Pedido> gerarPedidosAgrupados(List<ItemPedido> itens) {
-		//TODO Implementar!
+		// TODO Implementar!
 		return Lists.newArrayList();
 	}
 }

@@ -6,6 +6,15 @@ public class ItemPedido {
 	private String codigoItem;
 	private int quantidade;
 
+	public ItemPedido(String cnpjCliente, String usuarioSolicitante,
+			String codigoItem, int quantidade) {
+		super();
+		this.cnpjCliente = cnpjCliente;
+		this.usuarioSolicitante = usuarioSolicitante;
+		this.codigoItem = codigoItem;
+		this.quantidade = quantidade;
+	}
+
 	public String getCnpjCliente() {
 		return cnpjCliente;
 	}
