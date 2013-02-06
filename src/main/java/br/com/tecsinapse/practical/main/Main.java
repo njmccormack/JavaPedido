@@ -1,11 +1,10 @@
 package br.com.tecsinapse.practical.main;
 
+import java.util.Collections;
 import java.util.List;
 
 import br.com.tecsinapse.practical.modelo.ItemPedido;
 import br.com.tecsinapse.practical.modelo.Pedido;
-
-import com.google.common.collect.Lists;
 
 /**
  * Você está recebendo um projeto que contém as classes ItemPedido e Pedido. Um
@@ -21,10 +20,10 @@ import com.google.common.collect.Lists;
  * ser calculado dividindo-se o valorTotal pela quantidade e arredondando-se em
  * duas casas decimais pelo padrão monetário de arredondamento (0-4 pra baixo,
  * 5-9 para cima). Escolha o tipo mais apropriado levando-se em conta que é um
- * valor monetário precico;
+ * valor monetário preciso;
  * 
  * 3 - Implementar o método gerarPedidosAgrupados(List<ItemPedido>) :
- * List<Pedido> na classe Teste passada, levando em conta que deve ser gerado um
+ * List<Pedido> na classe Main passada, levando em conta que deve ser gerado um
  * único pedido para cada par único de CNPJ de cliente e usuário solicitante.
  * Não devem haver dois itens no mesmo pedido com o mesmo código de item -
  * quando isso acontecer, deve-se somar as quantidades e o valor total, gerando
@@ -45,9 +44,8 @@ import com.google.common.collect.Lists;
  * 
  */
 public class Main {
-
 	public static List<Pedido> gerarPedidosAgrupados(List<ItemPedido> itens) {
 		// TODO Implementar!
-		return Lists.newArrayList();
+		return Collections.emptyList();
 	}
 }
