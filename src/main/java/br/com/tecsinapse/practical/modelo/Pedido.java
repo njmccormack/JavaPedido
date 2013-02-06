@@ -1,14 +1,12 @@
 package br.com.tecsinapse.practical.modelo;
 
+import java.util.ArrayList;
 import java.util.List;
 
-import com.google.common.collect.Lists;
-
 public class Pedido {
-
 	private String cnpjCliente;
 	private String usuarioSolicitante;
-	private List<ItemPedido> itens = Lists.newArrayList();
+	private List<ItemPedido> itens = new ArrayList<>();
 
 	public String getCnpjCliente() {
 		return cnpjCliente;
