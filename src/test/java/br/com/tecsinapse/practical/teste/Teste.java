@@ -14,37 +14,27 @@ import com.google.common.collect.Lists;
 
 public class Teste {
 
-	@DataProvider(name = "itens", parallel = true)
+	@DataProvider(name = "itens")
 	public Object[][] itens() {
-		ItemPedido ip1 = new ItemPedido();
-		ip1.setCnpjCliente("1");
-		ip1.setCodigoItem("1");
-		ip1.setQuantidade(1);
-		ip1.setUsuarioSolicitante("1");
-		ItemPedido ip2 = new ItemPedido();
-		ip2.setCnpjCliente("2");
-		ip2.setCodigoItem("2");
-		ip2.setQuantidade(2);
-		ip2.setUsuarioSolicitante("2");
-		ItemPedido ip3 = new ItemPedido();
-		ip3.setCnpjCliente("1");
-		ip3.setCodigoItem("3");
-		ip3.setQuantidade(3);
-		ip3.setUsuarioSolicitante("1");
+		ItemPedido ip1 = gerarItemPedido("1", "1", "1", 1);
+		ItemPedido ip2 = gerarItemPedido("2", "2", "2", 2);
+		ItemPedido ip3 = gerarItemPedido("1", "1", "3", 3);
+		ItemPedido ip4 = gerarItemPedido("1", "1", "3", 3);
+		ItemPedido ip5 = gerarItemPedido("1", "1", "3", 6);
 
-		Pedido p1 = new Pedido();
-		p1.setCnpjCliente("1");
-		p1.setUsuarioSolicitante("1");
-		p1.getItens().add(ip1);
-		p1.getItens().add(ip3);
+		Pedido p1 = gerarPedido(ip1.getCnpjCliente(),
+				ip1.getUsuarioSolicitante(), ip1, ip3);
 
-		Pedido p2 = new Pedido();
-		p2.setCnpjCliente("2");
-		p2.setUsuarioSolicitante("2");
-		p2.getItens().add(ip2);
+		Pedido p2 = gerarPedido(ip2.getCnpjCliente(),
+				ip2.getUsuarioSolicitante(), ip2);
+
+		Pedido p3 = gerarPedido(ip1.getCnpjCliente(),
+				ip1.getUsuarioSolicitante(), ip1, ip5);
+
 		return new Object[][] {
 				{ Lists.newArrayList(ip1, ip2), Lists.newArrayList(p1, p2) },
-				{ Lists.newArrayList(), Lists.newArrayList() } };
+				{ Lists.newArrayList(), Lists.newArrayList() },
+				{ Lists.newArrayList(ip1, ip3, ip4), Lists.newArrayList(p3) } };
 	}
 
 	@Test(dataProvider = "itens")
@@ -52,7 +42,7 @@ public class Teste {
 			List<Pedido> pedidosEsperados) {
 		List<Pedido> pedidos = Main.gerarPedidosAgrupados(itens);
 
-		Assert.assertEquals(pedidos.size(), itens.size(),
+		Assert.assertEquals(pedidos.size(), pedidosEsperados.size(),
 				"número diferente de pedidos");
 
 		for (Pedido pEsperado : pedidosEsperados) {
@@ -98,6 +88,45 @@ public class Teste {
 					break;
 			}
 		}
+
+	}
+
+	/**
+	 * Não alterar esta assinatura
+	 * 
+	 * @param cnpjCliente
+	 * @param usuarioSolicitante
+	 * @param codigoItem
+	 * @param quantidade
+	 * @return
+	 */
+	public ItemPedido gerarItemPedido(String cnpjCliente,
+			String usuarioSolicitante, String codigoItem, int quantidade) {
+		ItemPedido ip = new ItemPedido();
+		ip.setCnpjCliente(cnpjCliente);
+		ip.setUsuarioSolicitante(usuarioSolicitante);
+		ip.setCodigoItem(codigoItem);
+		ip.setQuantidade(quantidade);
+		return ip;
+	}
+
+	/**
+	 * Não alterar esta assinatura
+	 * 
+	 * @param cnpjCliente
+	 * @param usuarioSolicitante
+	 * @param itens
+	 * @return
+	 */
+	public Pedido gerarPedido(String cnpjCliente, String usuarioSolicitante,
+			ItemPedido... itens) {
+		Pedido p = new Pedido();
+		p.setCnpjCliente(cnpjCliente);
+		p.setUsuarioSolicitante(usuarioSolicitante);
+		if (itens != null) {
+			p.getItens().addAll(Lists.newArrayList(itens));
+		}
+		return p;
 
 	}
 }
