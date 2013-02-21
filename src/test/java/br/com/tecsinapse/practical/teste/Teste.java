@@ -91,15 +91,6 @@ public class Teste {
 
 	}
 
-	/**
-	 * Não alterar esta assinatura
-	 * 
-	 * @param cnpjCliente
-	 * @param usuarioSolicitante
-	 * @param codigoItem
-	 * @param quantidade
-	 * @return
-	 */
 	public ItemPedido gerarItemPedido(String cnpjCliente,
 			String usuarioSolicitante, String codigoItem, int quantidade) {
 		ItemPedido ip = new ItemPedido();
@@ -110,14 +101,6 @@ public class Teste {
 		return ip;
 	}
 
-	/**
-	 * Não alterar esta assinatura
-	 * 
-	 * @param cnpjCliente
-	 * @param usuarioSolicitante
-	 * @param itens
-	 * @return
-	 */
 	public Pedido gerarPedido(String cnpjCliente, String usuarioSolicitante,
 			ItemPedido... itens) {
 		Pedido p = new Pedido();
