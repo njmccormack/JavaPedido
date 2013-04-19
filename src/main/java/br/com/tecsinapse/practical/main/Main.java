@@ -29,18 +29,16 @@ import br.com.tecsinapse.practical.modelo.Pedido;
  * quando isso acontecer, deve-se somar as quantidades e o valor total, gerando
  * um único item consolidado.
  * 
+ * Nossa suíte de testes para validação da sua solução chamará seu método com 
+ * um grande número de itens e espera-se que a solução projetada possa atender 
+ * de modo performático.
+ * 
  * Além dos critérios obrigatórios acima, serão dados pontos adicionais se a
  * ordem dos pedidos e dos itens for mantida durante o processo.
- * 
- * Sugira também (sem alterar o código) como o modelo poderia ser melhorado
- * usando apenas classes do Java SE 7 para que ficasse mais correto.
  * 
  * Não é permitido alterar a assinatura de nenhum método público exposto nas
  * classes, inclusive os construtores padrões. Pode-se adicionar outros métodos
  * além dos requeridos acima para facilitar a implementação.
- * 
- * Nossa suite de teste contém um numero indeterminado de itens e esperasse que
- * a solução projetada possa atender de modo performático.
  * 
  * @author TecSinapse
  * 
