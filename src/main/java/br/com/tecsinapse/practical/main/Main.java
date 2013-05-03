@@ -12,15 +12,16 @@ import br.com.tecsinapse.practical.modelo.Pedido;
  * Um ItemPedido contém também o cnpj do cliente, o usuário solicitante, o
  * código do item e a quantidade solicitada. Você deve:
  * 
- * 1 - Criar um atributo chamado valorTotal, tanto na classe ItemPedido como na
- * classe Pedido. Utilize o tipo correto do Java SE no atributo levando em conta 
- * que trata-se de um valor monetário com duas casas decimais;
+ * 1 - Criar uma propriedade JavaBean chamada valorTotal, tanto na classe 
+ * ItemPedido como na classe Pedido. Utilize o tipo correto do Java SE para a 
+ * propriedade levando em conta que se trata de um valor monetário com duas 
+ * casas decimais;
  * 
- * 2 - Criar um atributo chamado valorUnitario na classe ItemPedido, que deverá
- * ser calculado dividindo-se o valorTotal pela quantidade e arredondando-se em
- * duas casas decimais pelo padrão monetário de arredondamento (0-4 pra baixo,
- * 5-9 para cima). Escolha o tipo do Java SE mais apropriado levando-se em conta 
- * que é um valor monetário preciso;
+ * 2 - Criar uma propriedade JavaBean chamada valorUnitario na classe 
+ * ItemPedido, que deverá ser calculada dividindo-se o valorTotal pela 
+ * quantidade e arredondando-se em duas casas decimais pelo padrão monetário de 
+ * arredondamento (0-4 pra baixo, 5-9 para cima). Escolha o tipo do Java SE mais
+ * apropriado levando-se em conta que é um valor monetário preciso;
  * 
  * 3 - Implementar o método gerarPedidosAgrupados(List<ItemPedido>) :
  * List<Pedido> na classe Main passada, levando em conta que deve ser gerado um
@@ -31,14 +32,16 @@ import br.com.tecsinapse.practical.modelo.Pedido;
  * 
  * Nossa suíte de testes para validação da sua solução chamará seu método com 
  * um grande número de itens e espera-se que a solução projetada possa atender 
- * de modo performático.
+ * de modo performático. O projeto será validado via execução do Maven; se 
+ * estiver usando Eclipse, certifique-se de fazer o build via Maven.
  * 
  * Além dos critérios obrigatórios acima, serão dados pontos adicionais se a
  * ordem dos pedidos e dos itens for mantida durante o processo.
  * 
  * Não é permitido alterar a assinatura de nenhum método público exposto nas
  * classes, inclusive os construtores padrões. Pode-se adicionar outros métodos
- * além dos requeridos acima para facilitar a implementação.
+ * além dos requeridos acima para facilitar a implementação. Pode-se acrescentar
+ * testes adicionais.
  * 
  * @author TecSinapse
  * 
