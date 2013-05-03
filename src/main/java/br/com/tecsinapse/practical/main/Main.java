@@ -13,14 +13,14 @@ import br.com.tecsinapse.practical.modelo.Pedido;
  * código do item e a quantidade solicitada. Você deve:
  * 
  * 1 - Criar um atributo chamado valorTotal, tanto na classe ItemPedido como na
- * classe Pedido. Utilize o tipo correto no atributo levando em conta que
- * trata-se de um valor monetário com duas casas decimais;
+ * classe Pedido. Utilize o tipo correto do Java SE no atributo levando em conta 
+ * que trata-se de um valor monetário com duas casas decimais;
  * 
  * 2 - Criar um atributo chamado valorUnitario na classe ItemPedido, que deverá
  * ser calculado dividindo-se o valorTotal pela quantidade e arredondando-se em
  * duas casas decimais pelo padrão monetário de arredondamento (0-4 pra baixo,
- * 5-9 para cima). Escolha o tipo mais apropriado levando-se em conta que é um
- * valor monetário preciso;
+ * 5-9 para cima). Escolha o tipo do Java SE mais apropriado levando-se em conta 
+ * que é um valor monetário preciso;
  * 
  * 3 - Implementar o método gerarPedidosAgrupados(List<ItemPedido>) :
  * List<Pedido> na classe Main passada, levando em conta que deve ser gerado um
