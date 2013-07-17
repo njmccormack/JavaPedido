@@ -50,8 +50,13 @@ import br.com.tecsinapse.practical.modelo.Pedido;
 public class Main {
 	public static List<Pedido> gerarPedidosAgrupados(List<ItemPedido> itens) {
 		// TODO Implementar!
+		  int cont = 0;
+        for (ItemPedido p: itens){
+                 cont++;
+            }
+		  
+	     System.out.println("cont :" + cont);
 		
-		System.out.println("items is :" + itens);
 		//
 		return Collections.emptyList();
 	}
