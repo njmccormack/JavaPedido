@@ -9,7 +9,7 @@ public class ItemPedido {
 	
 	public String getCnpjCliente() {
 		//dados de teste
-		cnpjCliente = "123456789";
+		//cnpjCliente = "123456789";
 		return cnpjCliente;
 	}
 
@@ -19,7 +19,7 @@ public class ItemPedido {
 
 	public String getUsuarioSolicitante() {
 		//dados de teste
-		usuarioSolicitante="solicitante1";
+		//usuarioSolicitante="solicitante1";
 		return usuarioSolicitante;
 	}
 
@@ -29,7 +29,7 @@ public class ItemPedido {
 
 	public String getCodigoItem() {
 		//dados de teste
-		codigoItem="iten1";
+		//codigoItem="iten1";
 		return codigoItem;
 	}
 
@@ -39,7 +39,7 @@ public class ItemPedido {
 
 	public int getQuantidade() {
 		//dados de teste
-		quantidade=2;
+		//quantidade=2;
 		return quantidade;
 	}
 
@@ -48,7 +48,8 @@ public class ItemPedido {
 	}
 	
 	public double getValorTotal() {
-		valorTotal=10.00;
+		//valorTotal=10.00;
+		//format currency
 		return valorTotal;
 	}
 
@@ -61,8 +62,9 @@ public class ItemPedido {
 		quantidade=getQuantidade();
 		double valorUnitario;
 		valorUnitario=valorTotal/quantidade;
-		System.out.println("valorTotal="+valorTotal);
-		System.out.println("quantidade="+quantidade);
+		//System.out.println("valorTotal="+valorTotal);
+		//System.out.println("quantidade="+quantidade);
+		//format currency
 		return Math.round(valorUnitario);
 		
 	}
