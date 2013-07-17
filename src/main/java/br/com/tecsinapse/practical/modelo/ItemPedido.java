@@ -28,7 +28,7 @@ public class ItemPedido {
 	}
 
 	public String getCodigoItem() {
-		//dados de teste 
+		//dados de teste
 		codigoItem="iten1";
 		return codigoItem;
 	}

@@ -42,5 +42,5 @@ public class Pedido {
 	public void setValorTotal(String valorTotal) {
 		this.valorTotal = valorTotal;
 	}
-	
+
 }
