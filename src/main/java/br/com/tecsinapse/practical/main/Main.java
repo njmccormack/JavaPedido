@@ -59,8 +59,7 @@ public class Main {
 		Pedido p = new Pedido();
 		ItemPedido ip	= new ItemPedido();
 		List <ItemPedido> itens;
-		itens = new ArrayList<>();
-				  
+		itens = new ArrayList<>();		  
 		p.getCnpjCliente();
 		System.out.println("p is :" + p.getCnpjCliente());
 		System.out.println("valorUnit="+ip.calcValorUnitario());
