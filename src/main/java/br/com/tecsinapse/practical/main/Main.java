@@ -1,5 +1,6 @@
 package br.com.tecsinapse.practical.main;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -49,6 +50,21 @@ import br.com.tecsinapse.practical.modelo.Pedido;
 public class Main {
 	public static List<Pedido> gerarPedidosAgrupados(List<ItemPedido> itens) {
 		// TODO Implementar!
+		
+		System.out.println("items is :" + itens);
+		//
 		return Collections.emptyList();
+	}
+   public static void main(String[] args) throws Exception {
+		Pedido p = new Pedido();
+		ItemPedido ip	= new ItemPedido();
+		List <ItemPedido> itens;
+		itens = new ArrayList<>();
+				  
+		p.getCnpjCliente();
+		System.out.println("p is :" + p.getCnpjCliente());
+		System.out.println("valorUnit="+ip.calcValorUnitario());
+		gerarPedidosAgrupados(itens);
+		
 	}
 }

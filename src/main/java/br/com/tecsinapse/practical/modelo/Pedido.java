@@ -7,8 +7,11 @@ public class Pedido {
 	private String cnpjCliente;
 	private String usuarioSolicitante;
 	private List<ItemPedido> itens = new ArrayList<>();
+	private String valorTotal;
 
 	public String getCnpjCliente() {
+		//dados de teste
+		cnpjCliente = "123456789";
 		return cnpjCliente;
 	}
 
@@ -31,5 +34,14 @@ public class Pedido {
 	public void setItens(List<ItemPedido> itens) {
 		this.itens = itens;
 	}
+	
+	public String getValorTotal() {
+		return valorTotal;
+	}
+
+	public void setValorTotal(String valorTotal) {
+		this.valorTotal = valorTotal;
+	}
+
 
 }
