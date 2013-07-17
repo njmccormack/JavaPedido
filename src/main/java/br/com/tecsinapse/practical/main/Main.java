@@ -64,6 +64,5 @@ public class Main {
 		System.out.println("p is :" + p.getCnpjCliente());
 		System.out.println("valorUnit="+ip.calcValorUnitario());
 		gerarPedidosAgrupados(itens);
-		
 	}
 }

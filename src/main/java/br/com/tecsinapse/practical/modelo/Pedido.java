@@ -10,7 +10,7 @@ public class Pedido {
 	private String valorTotal;
 
 	public String getCnpjCliente() {
-		//dados de teste
+		//dados de teste 
 		cnpjCliente = "123456789";
 		return cnpjCliente;
 	}
@@ -42,6 +42,5 @@ public class Pedido {
 	public void setValorTotal(String valorTotal) {
 		this.valorTotal = valorTotal;
 	}
-
-
+	
 }

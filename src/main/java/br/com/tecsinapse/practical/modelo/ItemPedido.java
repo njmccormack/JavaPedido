@@ -28,7 +28,7 @@ public class ItemPedido {
 	}
 
 	public String getCodigoItem() {
-		//dados de teste
+		//dados de teste 
 		codigoItem="iten1";
 		return codigoItem;
 	}
@@ -63,7 +63,6 @@ public class ItemPedido {
 		valorUnitario=valorTotal/quantidade;
 		System.out.println("valorTotal="+valorTotal);
 		System.out.println("quantidade="+quantidade);
-		//System.out.println("valorUnit="+valorUnitario);
 		return Math.round(valorUnitario);
 		
 	}
